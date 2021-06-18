@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { memo } from 'react'
+import {Route,Switch,NavLink,HashRouter} from 'react-router-dom'
+import {renderRoutes} from 'react-router-config'
+import routes from './router/index.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+export default memo(function App() {
+    return (
+        <div>
+            <HashRouter>
+                {renderRoutes(routes)}
+            </HashRouter>
+        </div>
+    )
+})

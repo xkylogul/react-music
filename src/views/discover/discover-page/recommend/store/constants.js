@@ -1,0 +1,7 @@
+export const GET_RECOMMEND = 'GET_RECOMMEND'
+export const GET_HOT_RECOMMEND = 'GET_HOT_RECOMMEND'
+export const GET_NEW_ALBUM = 'GET_NEW_ALBUM'
+
+export const GET_TOP_LIST_FLY='GET_TOP_LIST_FLY' //飙升榜数据
+export const GET_TOP_LIST_NEW='GET_TOP_LIST_NEW' //新歌榜数据
+export const GET_TOP_LIST_ORIGINAL='GET_TOP_LIST_ORIGINAL' //原创榜数据

@@ -1,16 +1,9 @@
-import {GET_RECOMMEND} from './constants'
-const initstate = {
-    recommend:[] //推荐音乐数据
-}
+import { combineReducers} from 'redux-immutable'
+import {reducer as recommenderReducer} from '@/views/discover/discover-page/recommend/store/index.js'
+import {reducer as playerReducer} from '@/views/player/store/index'
 
-function reducer(state=initstate,action){
-    switch(action.type){
-        case GET_RECOMMEND :
-            return {
-                ...state,recommend:action.recommend
-            }
-            default:
-                return state
-    }
-}
-export default reducer
+const cReducer = combineReducers({
+    recommends:recommenderReducer,
+    player:playerReducer
+})
+export default cReducer
